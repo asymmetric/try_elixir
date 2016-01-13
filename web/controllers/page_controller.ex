@@ -6,6 +6,6 @@ defmodule TryElixir.PageController do
   end
 
   def about(conn, _params) do
-    conn |> render "about.html"
+    conn |> render(:about)
   end
 end
