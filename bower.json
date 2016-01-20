@@ -2,5 +2,12 @@
   "name": "TryElixir",
   "dependencies": {
     "codemirror": "~5.11.0"
+  },
+  "overrides": {
+    "codemirror": {
+      "main": [
+        "lib/codemirror.js", "lib/codemirror.css", "theme/elegant.css", "mode/javascript/javascript.js"
+      ]
+    }
   }
 }
