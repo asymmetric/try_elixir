@@ -1,7 +1,6 @@
 {
   "name": "TryElixir",
   "dependencies": {
-    "jquery": "2.2.0",
-    "jquery-console": "asymmetric/jquery-console#6ac1029"
+    "codemirror": "~5.11.0"
   }
 }
