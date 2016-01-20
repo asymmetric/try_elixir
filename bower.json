@@ -2,6 +2,6 @@
   "name": "TryElixir",
   "dependencies": {
     "jquery": "2.2.0",
-    "jquery-console": "/home/asymmetric/code/jquery-console"
+    "jquery-console": "asymmetric/jquery-console#6ac1029"
   }
 }
