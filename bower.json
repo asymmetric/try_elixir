@@ -6,7 +6,10 @@
   "overrides": {
     "codemirror": {
       "main": [
-        "lib/codemirror.js", "lib/codemirror.css", "theme/elegant.css", "mode/javascript/javascript.js",
+        "lib/codemirror.js",
+        "lib/codemirror.css",
+        "theme/elegant.css",
+        "mode/javascript/javascript.js",
         "addon/mode/simple.js"
       ]
     }
