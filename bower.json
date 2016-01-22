@@ -1,7 +1,8 @@
 {
   "name": "TryElixir",
   "dependencies": {
-    "codemirror-elixir": "/home/asymmetric/code/codemirror-elixir"
+    "codemirror-elixir": "/home/asymmetric/code/codemirror-elixir",
+    "jquery": "~2.2.0"
   },
   "overrides": {
     "codemirror": {
