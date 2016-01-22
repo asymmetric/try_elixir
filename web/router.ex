@@ -20,6 +20,12 @@ defmodule TryElixir.Router do
     get "/", PageController, :index
   end
 
+  scope "/api/", TryElixir do
+    pipe_through :api
+
+    post "/run", CommandController, :run
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", TryElixir do
   #   pipe_through :api
