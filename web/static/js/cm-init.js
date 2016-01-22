@@ -1,7 +1,7 @@
 let div = document.getElementById("editor");
 let cm = CodeMirror(div, {
   lineNumbers: true,
-  theme: "elegant",
+  theme: "material",
   mode: "elixir",
   autofocus: true
 });
