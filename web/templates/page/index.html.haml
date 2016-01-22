@@ -4,8 +4,11 @@
     A website where you can run Elixir code in a shell
 
 .row.cdm#editor
-  %button.btn.btn-default.cdm#indent{type: "Submit"}
-    indent
+  .btn-group{role: "group", aria-label: "controls"}
+    %button.btn.btn-default.cdm#indent{type: "Submit"}
+      indent
+    %button.btn.btn-default.cdm#run{type: "Submit"}
+      run
 
 .row.marketing
   .col-lg-6
