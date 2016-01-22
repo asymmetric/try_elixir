@@ -7,3 +7,9 @@ let cm = CodeMirror(div, {
 });
 
 $("#indent").click(() => cm.execCommand("indentAuto"));
+$("#run").click(() => {
+  content = cm.getValue();
+  $.post("/api/run", { content: content})
+  // TODO do something when call fails
+  .fail(() => console.log("ajax call failed"));
+});
