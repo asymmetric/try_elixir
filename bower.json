@@ -10,7 +10,6 @@
         "lib/codemirror.js",
         "lib/codemirror.css",
         "theme/material.css",
-        "mode/javascript/javascript.js",
         "addon/mode/simple.js"
       ]
     }
