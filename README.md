@@ -13,3 +13,4 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ## TODO
 
 * Split vendor.js out of app.js
+* get rid of jquery
