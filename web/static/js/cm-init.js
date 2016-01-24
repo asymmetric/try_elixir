@@ -16,6 +16,6 @@ $("#run")._.addEventListener("click", () => {
     },
     responseType: "json"
   })
-  .then(xhr => $("#result").value = xhr.response.resp)
+  .then(xhr => $("#result").innerHTML = xhr.response.resp)
   .catch(() => console.log("ajax call failed"))
 }, false);
