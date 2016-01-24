@@ -16,6 +16,6 @@ $("#run")._.addEventListener("click", () => {
     },
     responseType: "json"
   })
-  // TODO do something when call fails
-  .catch(() => console.log("ajax call failed"));
+  .then(xhr => $("#result").value = xhr.response.resp)
+  .catch(() => console.log("ajax call failed"))
 }, false);
