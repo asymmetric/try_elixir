@@ -6,10 +6,16 @@ let cm = CodeMirror(div, {
   autofocus: true
 });
 
-$("#indent").click(() => cm.execCommand("indentAuto"));
-$("#run").click(() => {
-  content = cm.getValue();
-  $.post("/api/run", { content: content})
+$("#indent")._.addEventListener("click", () => cm.execCommand("indentAuto"));
+$("#run")._.addEventListener("click", () => {
+  let content = cm.getValue();
+  $.fetch("/api/run", {
+    method: "POST",
+    data: {
+      content: content
+    },
+    responseType: "json"
+  })
   // TODO do something when call fails
-  .fail(() => console.log("ajax call failed"));
-});
+  .catch(() => console.log("ajax call failed"));
+}, false);
