@@ -2,6 +2,17 @@
   %h2= gettext "Welcome to %{name}", name: "Try Elixir!"
   %p.lead
     A website where you can run Elixir code in a shell
+
+.row.cdm#editor
+  .btn-group{role: "group", aria-label: "controls"}
+    %button.btn.btn-default.cdm#indent{type: "Submit"}
+      indent
+    %button.btn.btn-default.cdm#run{type: "Submit"}
+      run
+
+.row.cdm
+  %pre#result
+
 .row.marketing
   .col-lg-6
     %h4 Resources

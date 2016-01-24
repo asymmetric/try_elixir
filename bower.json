@@ -1,7 +1,22 @@
 {
   "name": "TryElixir",
   "dependencies": {
-    "jquery": "2.2.0",
-    "jquery-console": "asymmetric/jquery-console#6ac1029"
+    "codemirror-elixir": "asymmetric/codemirror-elixir",
+    "bliss": "LeaVerou/bliss#~1.0.0"
+  },
+  "overrides": {
+    "codemirror": {
+      "main": [
+        "lib/codemirror.js",
+        "lib/codemirror.css",
+        "theme/material.css",
+        "addon/mode/simple.js"
+      ]
+    },
+    "bliss": {
+      "main": [
+        "bliss.js"
+      ]
+    }
   }
 }
