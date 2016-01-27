@@ -13,11 +13,11 @@
   %body
     .container
       %header.header
-        %nav{role: "navigation"}
-          %ul.nav.nav-pills.pull-right
-            %li
-              %a{href: "http://www.phoenixframework.org/docs"} Get Started
-        %span.logo
+        .row
+          .col-xs-4
+            %img{src: "/images/elixir.png"}
+          .col-xs-8
+            Try Elixir
       %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
       %main{role: "main"}
