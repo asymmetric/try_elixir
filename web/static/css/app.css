@@ -75,3 +75,7 @@ form.link, form.button {
     border-bottom: 0;
   }
 }
+
+#logo {
+  max-height: 7rem;
+}
