@@ -10,7 +10,7 @@ defmodule TryElixir.CommandController do
       |> Code.eval_string
       |> elem(0)
 
-    IO.puts device, result
+    IO.inspect device, result, []
 
     output =
       device
