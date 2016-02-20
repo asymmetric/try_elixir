@@ -51,6 +51,7 @@ form.link, form.button {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0;
 }
 
 /* Supporting marketing content */
@@ -76,6 +77,48 @@ form.link, form.button {
   }
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.head-container {
+  max-height: 120px;
+  padding-top: 20px;
+}
+
+main {
+  max-height: calc(100% - 120px);
+  height: 100%;
+}
+
 #logo {
   max-height: 7rem;
+}
+
+#editor {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 50%;
+}
+
+.CodeMirror {
+  min-height: 100px;
+  height: 100%;
+}
+
+.row.cdm {
+  height: 30%;
+}
+
+#result {
+  height: 100%;
 }

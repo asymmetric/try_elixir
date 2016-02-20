@@ -11,16 +11,17 @@
     - css_path = static_path(@conn, "/css/app.css")
     %link{href: "#{css_path}", rel: "stylesheet"}
   %body
-    .container
+    .container.head-container
       %header.header
         .row
           .col-xs-4
             %img#logo{src: "/images/elixir.png"}
           .col-xs-8
-            Try Elixir
+            %h1
+              Try Elixir
       %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
-      %main{role: "main"}
-        = render @view_module, @view_template, assigns
+    %main.container{role: "main"}
+      = render @view_module, @view_template, assigns
     - js_path = static_path(@conn, "/js/app.js")
     %script{src: "#{js_path}"}
