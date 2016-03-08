@@ -9,13 +9,18 @@ let cm = CodeMirror(div, {
 $("#indent")._.addEventListener("click", () => cm.execCommand("indentAuto"));
 $("#run")._.addEventListener("click", () => {
   let content = cm.getValue();
-  $.fetch("/api/run", {
+  fetch("/api/run", {
     method: "POST",
-    data: {
-      content: content
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
     },
+    body: JSON.stringify({
+      content: content
+    }),
     responseType: "json"
   })
-  .then(xhr => $("#result").innerHTML = xhr.response.resp)
+  .then(response => response.json())
+  .then(json => $("#result").innerHTML = json.resp)
   .catch(() => console.log("ajax call failed"))
 }, false);
