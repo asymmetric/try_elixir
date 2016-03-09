@@ -1,7 +1,8 @@
 {
   "name": "TryElixir",
   "dependencies": {
-    "codemirror-elixir": "asymmetric/codemirror-elixir"
+    "codemirror-elixir": "asymmetric/codemirror-elixir",
+    "fetch": "^0.11.0"
   },
   "overrides": {
     "codemirror": {
