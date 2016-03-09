@@ -6,8 +6,8 @@ let cm = CodeMirror(div, {
   autofocus: true
 });
 
-$("#indent")._.addEventListener("click", () => cm.execCommand("indentAuto"));
-$("#run")._.addEventListener("click", () => {
+document.getElementById("indent").addEventListener("click", () => cm.execCommand("indentAuto"));
+document.getElementById("run").addEventListener("click", () => {
   let content = cm.getValue();
   fetch("/api/run", {
     method: "POST",
@@ -21,6 +21,6 @@ $("#run")._.addEventListener("click", () => {
     responseType: "json"
   })
   .then(response => response.json())
-  .then(json => $("#result").innerHTML = json.resp)
+  .then(json => document.getElementById("result").innerHTML = json.resp)
   .catch(() => console.log("ajax call failed"))
-}, false);
+});
