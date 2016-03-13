@@ -1,7 +1,7 @@
 defmodule TryElixir.CommandController do
   use TryElixir.Web, :controller
 
-  def run(conn, %{"content" => content}) do
+  def create(conn, %{"content" => content}) do
     {:ok, device} = StringIO.open ""
     :erlang.group_leader(device, self)
 

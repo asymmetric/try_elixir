@@ -9,7 +9,7 @@ let cm = CodeMirror(div, {
 document.getElementById("indent").addEventListener("click", () => cm.execCommand("indentAuto"));
 document.getElementById("run").addEventListener("click", () => {
   let content = cm.getValue();
-  fetch("/api/run", {
+  fetch("/api/commands", {
     method: "POST",
     headers: {
       'Accept': 'application/json',

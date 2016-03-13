@@ -23,7 +23,7 @@ defmodule TryElixir.Router do
   scope "/api/", TryElixir do
     pipe_through :api
 
-    post "/run", CommandController, :run
+    post "/commands", CommandController, :create
   end
 
   # Other scopes may use custom stacks.
