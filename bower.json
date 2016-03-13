@@ -3,7 +3,8 @@
   "dependencies": {
     "codemirror-elixir": "asymmetric/codemirror-elixir",
     "fetch": "^0.11.0",
-    "es6-promise": "^3.2.1"
+    "es6-promise": "^3.2.1",
+    "bootstrap": "^3.3.6"
   },
   "overrides": {
     "codemirror": {
@@ -13,6 +14,12 @@
         "theme/material.css",
         "addon/mode/simple.js"
       ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css"
+      ],
+      "dependencies": {}
     }
   }
 }
