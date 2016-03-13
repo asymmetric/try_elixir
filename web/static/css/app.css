@@ -122,3 +122,15 @@ main {
 #result {
   height: 100%;
 }
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/pacifico/pacifico-webfont.woff2'),
+    url('/fonts/pacifico/pacifico-webfont.woff'),
+    url('/fonts/pacifico/pacifico-webfont.ttf');
+}
+
+
+header h1 {
+  font-family: 'Pacifico';
+}
