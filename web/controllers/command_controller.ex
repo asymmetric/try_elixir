@@ -5,12 +5,16 @@ defmodule TryElixir.CommandController do
     {:ok, device} = StringIO.open ""
     :erlang.group_leader(device, self)
 
-    result =
-      content
-      |> Code.eval_string
-      |> elem(0)
+    try do
+      result =
+        content
+        |> Code.eval_string
+        |> elem(0)
 
-    IO.inspect device, result, []
+      IO.inspect device, result, []
+    rescue
+      error -> IO.inspect device, error.__struct__.message(error), []
+    end
 
     output =
       device
