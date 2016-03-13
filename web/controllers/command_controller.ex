@@ -11,9 +11,9 @@ defmodule TryElixir.CommandController do
         |> Code.eval_string
         |> elem(0)
 
-      IO.inspect device, result, []
+      IO.inspect result
     rescue
-      error -> IO.inspect device, error.__struct__.message(error), []
+      error -> IO.inspect error.__struct__.message(error)
     end
 
     output =
