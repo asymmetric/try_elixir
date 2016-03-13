@@ -6,7 +6,6 @@ let cm = CodeMirror(div, {
   autofocus: true
 });
 
-document.getElementById("indent").addEventListener("click", () => cm.execCommand("indentAuto"));
 document.getElementById("run").addEventListener("click", () => {
   let content = cm.getValue();
   fetch("/api/commands", {
