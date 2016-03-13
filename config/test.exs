@@ -8,12 +8,3 @@ config :try_elixir, TryElixir.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-
-# Configure your database
-config :try_elixir, TryElixir.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "try_elixir_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox

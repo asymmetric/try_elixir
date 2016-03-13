@@ -9,8 +9,6 @@ defmodule TryElixir do
     children = [
       # Start the endpoint when the application starts
       supervisor(TryElixir.Endpoint, []),
-      # Start the Ecto repository
-      supervisor(TryElixir.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(TryElixir.Worker, [arg1, arg2, arg3]),
     ]

@@ -16,9 +16,6 @@ defmodule TryElixir.ModelCase do
 
   using do
     quote do
-      alias TryElixir.Repo
-      import Ecto.Model
-      import Ecto.Query, only: [from: 2]
       import TryElixir.ModelCase
     end
   end
