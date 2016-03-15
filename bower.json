@@ -17,7 +17,8 @@
     },
     "bootstrap": {
       "main": [
-        "dist/css/bootstrap.css"
+        "dist/css/bootstrap.css",
+        "dist/js/popover.js"
       ],
       "dependencies": {}
     }
