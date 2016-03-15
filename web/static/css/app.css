@@ -91,6 +91,7 @@ body {
 .head-container {
   max-height: 120px;
   padding-top: 20px;
+  background-color: mediumturquoise;
 }
 
 main {
