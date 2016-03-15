@@ -129,7 +129,7 @@ header h1 {
 
 header h1.title {
   font-size: 5rem;
-  color: darkcyan;
+  color: rgb(51, 51, 51);
 }
 
 .glyphicon-question-sign {
