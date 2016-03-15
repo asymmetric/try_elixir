@@ -122,8 +122,13 @@ main {
 
 #result {
   height: 100%;
+  background-color: white;
 }
 
 header h1 {
   font-family: 'Pacifico';
+}
+
+.glyphicon-question-sign {
+  font-size: 2rem;
 }
