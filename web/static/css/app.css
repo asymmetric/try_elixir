@@ -127,6 +127,11 @@ header h1 {
   font-family: 'Pacifico';
 }
 
+header h1.title {
+  font-size: 5rem;
+  color: darkcyan;
+}
+
 .glyphicon-question-sign {
   font-size: 2rem;
 }
