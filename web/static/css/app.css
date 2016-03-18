@@ -89,11 +89,13 @@ body {
 }
 
 .head-container {
+  max-height: 120px;
   padding-top: 20px;
+  background-image: linear-gradient(180deg, #00B4E6, #00E6B4)
 }
 
 main {
-  max-height: calc(100% - 27%);
+  max-height: calc(100% - 120px);
   height: 100%;
 }
 
@@ -133,11 +135,4 @@ header h1.title {
 
 .glyphicon-question-sign {
   font-size: 2rem;
-}
-
-body {
-  background-image: linear-gradient(180deg, #2ED2FF, #009474);
-}
-
-.bottom {
 }
