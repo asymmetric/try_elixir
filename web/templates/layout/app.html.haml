@@ -11,17 +11,16 @@
     - css_path = static_path(@conn, "/css/app.css")
     %link{href: "#{css_path}", rel: "stylesheet"}
   %body
-    .container.head-container
+    .container-fluid.head-container
       %header.header
         .row
-          .col-xs-4
-            %img#logo{src: "/images/elixir.png"}
-          .col-xs-8
-            %h1
-              Try Elixir
-              &nbsp;
-              %a.hint--rounded.hint--right{href: '#', data-hint: 'Type Elixir commands into the shell!', aria-hidden: "true"}
-                .span.glyphicon.glyphicon-question-sign
+          %h1.title
+            Try Elixir
+            &nbsp;
+            %a.hint--rounded.hint--right{href: '#', data-hint: 'Type Elixir commands into the shell!', aria-hidden: "true"}
+              .span.glyphicon.glyphicon-question-sign
+      %a.logo-link{href: 'http://elixir-lang.org'}
+        %img#logo{src: "/images/elixir.png"}
       %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
     %main.container{role: "main"}

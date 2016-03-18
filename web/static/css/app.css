@@ -98,6 +98,12 @@ main {
   height: 100%;
 }
 
+.logo-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+}
+
 #logo {
   max-height: 7rem;
 }
@@ -118,14 +124,29 @@ main {
 }
 
 #result {
-  height: 100%;
   background-color: white;
+  height: 100%;
 }
 
 header h1 {
   font-family: 'Pacifico';
 }
 
+header h1.title {
+  color: rgb(51, 51, 51);
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
 .glyphicon-question-sign {
   font-size: 2rem;
+}
+
+body {
+  background-image: linear-gradient(180deg, #2ED2FF, #009474);
+}
+
+main.container {
+  position: relative;
 }
