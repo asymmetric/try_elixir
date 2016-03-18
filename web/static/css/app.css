@@ -98,10 +98,18 @@ main {
   height: 100%;
 }
 
-.logo-link {
+#logo-link {
   position: fixed;
   bottom: 2rem;
   right: 1rem;
+}
+
+#github-link {
+  color: black;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
 }
 
 #logo {
@@ -137,10 +145,6 @@ header h1.title {
   font-size: 5rem;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
-
-.glyphicon-question-sign {
-  font-size: 2rem;
 }
 
 body {
