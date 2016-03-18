@@ -154,3 +154,7 @@ body {
 main.container {
   position: relative;
 }
+
+a#qmark {
+  font-size: 2rem;
+}
