@@ -3,6 +3,7 @@ let cm = CodeMirror(div, {
   lineNumbers: true,
   theme: "material",
   mode: "elixir",
+  value: 'IO.puts "Type Elixir code in here, then press run!"',
   autofocus: true
 });
 
