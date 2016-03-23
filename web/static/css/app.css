@@ -159,3 +159,8 @@ a#qmark {
   font-size: 2rem;
   vertical-align: middle;
 }
+
+button#run {
+  color: white;
+  background-color: #AE00E8;
+}
