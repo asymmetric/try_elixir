@@ -157,4 +157,5 @@ main.container {
 
 a#qmark {
   font-size: 2rem;
+  vertical-align: middle;
 }
