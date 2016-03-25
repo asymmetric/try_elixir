@@ -18,11 +18,13 @@
             Try Elixir
             &nbsp;
             %a#qmark.hint--rounded.hint--right{href: '#', data-hint: 'Type Elixir commands into the shell!', aria-hidden: "true"}
-              .span.icon-help-circled
-      %a#logo-link{href: 'http://elixir-lang.org'}
+              %span.icon-help-circled
+      %a.links#logo-link{href: 'http://elixir-lang.org'}
         %img#logo{src: "/images/elixir.png"}
-      %a#github-link{href: 'https://github.com/asymmetric/try_elixir'}
-        .icon-github
+      %a.links#github-link{href: 'https://github.com/asymmetric/try_elixir'}
+        %span.icon-github
+      %a.links#blogpost{href: 'https://asymmetric.github.io/blog-post'}
+        more info
       %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
     %main.container{role: "main"}

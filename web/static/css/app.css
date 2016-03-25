@@ -98,18 +98,31 @@ main {
   height: 100%;
 }
 
-#logo-link {
+.links {
   position: fixed;
   bottom: 2rem;
+}
+
+#logo-link {
   right: 1rem;
 }
 
 #github-link {
   color: black;
   font-size: 3rem;
-  position: fixed;
-  bottom: 2rem;
   left: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+#blogpost::before {
+  content: " | ";
+  font-size: 3rem;
+}
+
+#blogpost {
+  color: black;
+  left: 8rem;
+  font-size: 2rem;
 }
 
 #logo {
