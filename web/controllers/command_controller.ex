@@ -13,7 +13,7 @@ defmodule TryElixir.CommandController do
 
       IO.inspect result
     rescue
-      error -> IO.inspect error.__struct__.message(error)
+      exception -> IO.inspect Exception.message(exception)
     end
 
     output =
