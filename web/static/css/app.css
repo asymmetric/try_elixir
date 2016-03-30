@@ -11,14 +11,6 @@ body, form, ul, table {
   margin-bottom: 20px;
 }
 
-/* Phoenix flash messages */
-.alert:empty { display: none; }
-
-/* Phoenix inline forms in links and buttons */
-form.link, form.button {
-  display: inline;
-}
-
 /* Custom page header */
 .logo {
   width: 519px;
@@ -43,18 +35,6 @@ form.link, form.button {
 }
 .container-narrow > hr {
   margin: 30px 0;
-}
-
-/* Main marketing message */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 0;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 35px 0;
 }
 
 /* Responsive: Portrait tablets and up */

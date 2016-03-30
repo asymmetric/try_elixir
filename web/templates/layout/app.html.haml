@@ -23,8 +23,6 @@
         %span.icon-github
       %a.links#blogpost{href: 'https://asymmetric.github.io/2016/03/28/tryelixir/', target: '_'}
         %span.icon-help-circled
-      %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
-      %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
     %main.container{role: "main"}
       = render @view_module, @view_template, assigns
     - js_path = static_path(@conn, "/js/app.js")
