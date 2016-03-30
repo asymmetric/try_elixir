@@ -112,17 +112,20 @@ main {
   font-size: 3rem;
   left: 1rem;
   padding-bottom: 0.5rem;
+  vertical-align: middle;
 }
 
 #blogpost::before {
   content: " | ";
   font-size: 3rem;
+  text-decoration: none;
 }
 
 #blogpost {
   color: black;
   left: 6rem;
   font-size: 2rem;
+  vertical-align: middle;
 }
 
 #logo {

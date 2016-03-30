@@ -17,14 +17,12 @@
           %h1.title
             Try Elixir
             &nbsp;
-            %a#qmark.hint--rounded.hint--right{href: '#', data-hint: 'Type Elixir commands into the shell!', aria-hidden: "true"}
-              %span.icon-help-circled
       %a.links#logo-link{href: 'http://elixir-lang.org'}
         %img#logo{src: "/images/elixir.png"}
-      %a.links#github-link{href: 'https://github.com/asymmetric/try_elixir'}
+      %a.links#github-link{href: 'https://github.com/asymmetric/try_elixir', target: '_'}
         %span.icon-github
-      %a.links#blogpost{href: 'https://asymmetric.github.io/2016/03/28/tryelixir/'}
-        more info
+      %a.links#blogpost{href: 'https://asymmetric.github.io/2016/03/28/tryelixir/', target: '_'}
+        %span.icon-help-circled
       %p.alert.alert-info{role: "alert"}= get_flash(@conn, :info)
       %p.alert.alert-danger{role: "alert"}= get_flash(@conn, :error)
     %main.container{role: "main"}
