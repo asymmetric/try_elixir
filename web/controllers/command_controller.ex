@@ -1,4 +1,5 @@
 defmodule TryElixir.CommandController do
+  @blacklist ~r/:erlang.halt|:init.(stop|restart|(re)?boot)/
   use TryElixir.Web, :controller
 
   def create(conn, %{"content" => content}) do
@@ -9,8 +10,7 @@ defmodule TryElixir.CommandController do
 
   defp safe_input?(content) do
     cond do
-      String.match? content, ~r/:erlang.halt/ -> {:unsafe, content}
-      String.match? content, ~r/:init.(stop|restart|reboot|boot)/ -> {:unsafe, content}
+      String.match? content, @blacklist -> {:unsafe, content}
       true -> {:safe, content}
     end
   end
