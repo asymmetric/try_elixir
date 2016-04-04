@@ -9,6 +9,7 @@ defmodule TryElixir do
     children = [
       # Start the endpoint when the application starts
       supervisor(TryElixir.Endpoint, []),
+      supervisor(TryElixir.CommandSupervisor, []),
       # Here you could define other workers and supervisors as children
       # worker(TryElixir.Worker, [arg1, arg2, arg3]),
     ]
