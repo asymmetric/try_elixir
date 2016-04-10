@@ -6,7 +6,7 @@ defmodule TryElixir.CodeEvaluator do
   end
 
   def run(code) do
-    GenServer.call __MODULE__, {:run, code}
+    GenServer.call __MODULE__, {:run, code}, :infinity
   end
 
   def handle_call({:run, code}, _from, _state) do
@@ -43,11 +43,9 @@ defmodule TryElixir.CodeEvaluator do
   defp handle_task_reply({:ok, reply}, device) do
     IO.inspect device, reply, []
   end
-
   defp handle_task_reply({:exit, reason}, device) do
     IO.inspect device, reason, []
   end
-
   defp handle_task_reply(nil, device) do
     IO.puts "timeout!"
   end
