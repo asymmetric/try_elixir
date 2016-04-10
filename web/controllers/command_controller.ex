@@ -1,27 +1,24 @@
 defmodule TryElixir.CommandController do
+  @blacklist ~r/:erlang.halt|:init.(stop|restart|(re)?boot)/
   use TryElixir.Web, :controller
 
   def create(conn, %{"content" => content}) do
-    {:ok, device} = StringIO.open ""
-    :erlang.group_leader(device, self)
+    content
+    |> safe_input?
+    |> safe_render(conn)
+  end
 
-    try do
-      result =
-        content
-        |> Code.eval_string
-        |> elem(0)
-
-      IO.inspect result
-    rescue
-      exception -> IO.inspect Exception.message(exception)
+  defp safe_input?(content) do
+    cond do
+      String.match? content, @blacklist -> {:unsafe, content}
+      true -> {:safe, content}
     end
+  end
 
-    output =
-      device
-      |> StringIO.contents
-      |> elem(1)
+  defp safe_render({:unsafe, _content}, conn), do: conn |> json(%{resp: "no no no"})
+  defp safe_render({:safe, content}, conn) do
+    result = TryElixir.CodeEvaluator.run(content)
 
-    conn
-    |> json(%{resp: output})
+    conn |> json(%{resp: result})
   end
 end
