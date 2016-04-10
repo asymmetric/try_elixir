@@ -16,9 +16,7 @@ defmodule TryElixir.CodeEvaluator do
     task = Task.async(fn -> run_code(code) end)
 
     Task.yield(task, 5000)
-    |> handle_task_reply(device)
-
-    Task.shutdown(task, :brutal_kill)
+    |> handle_task_reply(task)
 
     output =
       device
@@ -40,13 +38,14 @@ defmodule TryElixir.CodeEvaluator do
     end
   end
 
-  defp handle_task_reply({:ok, reply}, device) do
-    IO.inspect device, reply, []
+  defp handle_task_reply({:ok, reply}, _task) do
+    IO.inspect reply
   end
-  defp handle_task_reply({:exit, reason}, device) do
-    IO.inspect device, reason, []
+  defp handle_task_reply({:exit, reason}, _task) do
+    IO.inspect reason
   end
-  defp handle_task_reply(nil, device) do
+  defp handle_task_reply(nil, task) do
     IO.puts "timeout!"
+    Task.shutdown(task, :brutal_kill)
   end
 end
