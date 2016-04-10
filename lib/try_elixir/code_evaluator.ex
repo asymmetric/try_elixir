@@ -15,8 +15,10 @@ defmodule TryElixir.CodeEvaluator do
 
     task = Task.async(fn -> run_code(code) end)
 
-    reply = Task.yield(task, 5000)
-    handle_task_reply(reply, device)
+    Task.yield(task, 5000)
+    |> handle_task_reply(device)
+
+    Task.shutdown(task, :brutal_kill)
 
     output =
       device
