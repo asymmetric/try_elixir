@@ -13,17 +13,10 @@ defmodule TryElixir.CodeEvaluator do
     {:ok, device} = StringIO.open ""
     :erlang.group_leader(device, self)
 
-    result =
-      try do
-        code
-        |> Code.eval_string
-        |> elem(0)
-      rescue
-        exception -> Exception.message(exception)
-      end
+    task = Task.async(run_code(code, device))
+    {:ok, reply} = Task.yield(task, 5000)
 
-
-    IO.inspect device, result
+    IO.inspect device, reply
 
     output =
       device
@@ -33,5 +26,15 @@ defmodule TryElixir.CodeEvaluator do
     StringIO.close device
 
     {:reply, output, nil}
+  end
+
+  defp run_code(code, device) do
+    try do
+      code
+      |> Code.eval_string
+      |> elem(0)
+    rescue
+      exception -> Exception.message(exception)
+    end
   end
 end
