@@ -38,14 +38,9 @@ defmodule TryElixir.CodeEvaluator do
     end
   end
 
-  defp handle_task_reply({:ok, reply}, _task) do
-    IO.inspect reply
-  end
-  defp handle_task_reply({:exit, reason}, _task) do
-    IO.inspect reason
-  end
+  defp handle_task_reply({_, reply}, _task), do: IO.inspect reply
   defp handle_task_reply(nil, task) do
-    IO.puts "timeout!"
+    IO.inspect "timeout!"
     Task.shutdown(task, :brutal_kill)
   end
 end
