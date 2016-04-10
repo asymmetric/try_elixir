@@ -23,7 +23,7 @@ defmodule TryElixir.CodeEvaluator do
       end
 
 
-    IO.inspect result
+    IO.inspect device, result
 
     output =
       device
